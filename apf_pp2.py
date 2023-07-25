@@ -343,7 +343,7 @@ def main():
 #     	oq=np.random.randint(10,env_size,size=(2,20))
 #     	oq = np.array([[21, 20], [90, 100], [92, 84], [83, 84], [82, 97], [40, 43]]).T
 
-	q0 = np.array([[10], [10]])
+	q0 = np.array([[10], [0]])
 	print("The start position is:\n", q)
 	print("The goal position is:\n", q0)
 	print("The obstacles are:\n", oq)
@@ -374,7 +374,7 @@ def main():
                 
                 
 
-	target_speed = 12.0 / 3.6  # [m/s]
+	target_speed = 10.0 / 3.6  # [m/s]
 	
 	
 	T = 200.0  # max simulation time
