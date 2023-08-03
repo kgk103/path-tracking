@@ -328,8 +328,8 @@ def odom_callback(odom_msg):
 
 def main():
 	rospy.init_node('usv_vel_ctrl', anonymous=False)
-	pub = rospy.Publisher('/user/cmd_vel', Twist, queue_size = 100)
-	sub = rospy.Subscriber('/volta_base_controller/odom', Odometry, odom_callback, queue_size = 100)
+	pub = rospy.Publisher('volta_base_controller/cmd_vel', Twist, queue_size = 100)
+	sub = rospy.Subscriber('/poseupdate', Odometry, odom_callback, queue_size = 100)
 	#path_publisher = rospy.Publisher('/volta_base_controller/odom', Path, queue_size=1)
 
 	
